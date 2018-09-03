@@ -39,6 +39,7 @@ javadoc {
     source = sourceSets.main.allJava
     destinationDir = file('docs')
     title = "MP0"
+    options.addBooleanOption('html5', true)
 }
 
 processTestResources {
