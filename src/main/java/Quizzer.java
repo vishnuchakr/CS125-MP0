@@ -36,8 +36,26 @@ public final class Quizzer {
 
     public static int computeScore(final Boolean diversityAnswerCorrect,
             final Boolean illiacAnswerCorrect, final Boolean mosaicAnswerCorrect,
-            final Boolean variableAnswerCorrect) {
-        return true;
+            final Boolean variableAnswerCorrect)
+    {
+        int score = 0;
+
+        if (diversityAnswerCorrect){
+            score += 5;
+        }
+
+        if (illiacAnswerCorrect){
+            score += 5;
+        }
+
+        if (mosaicAnswerCorrect){
+            score += 5;
+        }
+
+        if (variableAnswerCorrect){
+            score += 5;
+        }
+        return score;
     }
 
     /* *******************************************************************************************

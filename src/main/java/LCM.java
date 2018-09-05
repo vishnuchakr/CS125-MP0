@@ -27,7 +27,13 @@ public final class LCM {
      * @return the least common multiple of the two integers.
      * @see <a href="https://en.wikipedia.org/wiki/Least_common_multiple">Least common multiple</a>
      */
-    public static int lcm(final int first, final int second) {
+    public static int lcm(final int first, final int second)
+    {
+        if (first == 0 || second == 0){
+            return LCM_INVALID;
+        }
+
+
         return 0.0;
     }
 
