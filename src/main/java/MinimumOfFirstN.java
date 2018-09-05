@@ -27,21 +27,19 @@ public class MinimumOfFirstN {
     {
         double min = doubles[0];
 
-        for (int i = 1; i < n; i++)
-        {
+        for (int i = 0; i < n; i++){
             if (doubles[i] < min){
                 min = doubles[i];
             }
         }
 
-        if (min <= 0.0){
+        if (n <= 0){
             return 0.0;
         }
 
         else {
             return min;
         }
-
     }
 
     /* ********************************************************************************************
