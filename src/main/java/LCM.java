@@ -29,12 +29,41 @@ public final class LCM {
      */
     public static int lcm(final int first, final int second)
     {
+        int multiple;
+
         if (first == 0 || second == 0){
             return LCM_INVALID;
         }
 
+        else if (first % second == 0){
+            multiple = first;
+        }
 
-        return 0.0;
+        else if (second % first == 0){
+            multiple = second;
+        }
+
+        else {
+
+            if (first > second){
+
+                multiple = first;
+                while (multiple % first != 0 && multiple % second != 0){
+                    multiple++;
+                }
+
+            }
+
+            else{
+
+                multiple = second;
+                while (multiple % first != 0 && multiple % second != 0){
+                    multiple++;
+                }
+
+            }
+        }
+        return multiple;
     }
 
     /* ********************************************************************************************
