@@ -25,18 +25,25 @@ public class MinimumOfFirstN {
      */
     public static double minimumOfFirstN(final double[] doubles, final int n)
     {
+
+        if (n <= 0.0 || doubles == null || doubles.length == 0){
+            return 0.0;
+        }
+
         double min = doubles[0];
 
-        for (int i = 1; i < n; i++){
+        int N = n;
+
+        if (N > doubles.length){
+            N = doubles.length;
+        }
+
+        for (int i = 1; i < N; i++){
 
             if (doubles[i] < min){
                 min = doubles[i];
             }
 
-        }
-
-        if (n <= 0.0 || doubles.length == 0){
-            min = 0.0;
         }
 
         return min;

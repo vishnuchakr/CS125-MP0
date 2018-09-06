@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -41,19 +42,19 @@ public final class Quizzer {
         int score = 0;
 
         if (diversityAnswerCorrect){
-            score += 5;
+            score += POINTS_PER_QUESTION;
         }
 
         if (illiacAnswerCorrect){
-            score += 5;
+            score += POINTS_PER_QUESTION;
         }
 
         if (mosaicAnswerCorrect){
-            score += 5;
+            score += POINTS_PER_QUESTION;
         }
 
         if (variableAnswerCorrect){
-            score += 5;
+            score += POINTS_PER_QUESTION;
         }
         return score;
     }
