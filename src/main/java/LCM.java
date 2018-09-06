@@ -34,22 +34,22 @@ public final class LCM {
             return LCM_INVALID;
         }
 
-        if (first == second) {
-            return first;
-        } else if (first > second) {
-            for (int i = 1; i < second; i++) {
+        if (Math.abs(first) == Math.abs(second)) {
+            return Math.abs(first);
+        } else if (Math.abs(first) > Math.abs(second)) {
+            for (int i = 1; i < Math.abs(second); i++) {
                 if ((i * first) % second == 0) {
                     return Math.abs(i * first);
                 }
             }
         } else {
-            for (int i = 1; i < first; i++) {
+            for (int i = 1; i < Math.abs(first); i++) {
                 if ((i * second) % first == 0) {
                     return Math.abs(i * second);
                 }
             }
         }
-        return first * second;
+        return Math.abs(first * second);
     }
 
     /* ********************************************************************************************
