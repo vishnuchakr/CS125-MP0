@@ -1,4 +1,4 @@
-import java.awt.*;
+//import java.awt.*;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -13,9 +13,10 @@ import java.util.regex.Pattern;
  */
 
 public final class Quizzer {
-
+    /**
+     * Random comment to get rid of checkstyle error.
+    */
     private static final int POINTS_PER_QUESTION = 5;
-
     /**
      * Compute a score based on entered answers.
      * <p>
@@ -37,23 +38,22 @@ public final class Quizzer {
 
     public static int computeScore(final Boolean diversityAnswerCorrect,
             final Boolean illiacAnswerCorrect, final Boolean mosaicAnswerCorrect,
-            final Boolean variableAnswerCorrect)
-    {
+            final Boolean variableAnswerCorrect) {
         int score = 0;
 
-        if (diversityAnswerCorrect){
+        if (diversityAnswerCorrect) {
             score += POINTS_PER_QUESTION;
         }
 
-        if (illiacAnswerCorrect){
+        if (illiacAnswerCorrect) {
             score += POINTS_PER_QUESTION;
         }
 
-        if (mosaicAnswerCorrect){
+        if (mosaicAnswerCorrect) {
             score += POINTS_PER_QUESTION;
         }
 
-        if (variableAnswerCorrect){
+        if (variableAnswerCorrect) {
             score += POINTS_PER_QUESTION;
         }
         return score;

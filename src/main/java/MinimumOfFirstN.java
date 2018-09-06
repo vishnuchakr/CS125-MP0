@@ -23,24 +23,23 @@ public class MinimumOfFirstN {
      * @param n number of values at the start of the array to consider when calculating the minimum
      * @return the minimum of the first N values in the array
      */
-    public static double minimumOfFirstN(final double[] doubles, final int n)
-    {
+    public static double minimumOfFirstN(final double[] doubles, final int n) {
 
-        if (n <= 0.0 || doubles == null || doubles.length == 0){
+        if (n <= 0.0 || doubles == null || doubles.length == 0) {
             return 0.0;
         }
 
         double min = doubles[0];
 
-        int N = n;
+        int n1 = n;
 
-        if (N > doubles.length){
-            N = doubles.length;
+        if (n1 > doubles.length) {
+            n1 = doubles.length;
         }
 
-        for (int i = 1; i < N; i++){
+        for (int i = 1; i < n1; i++) {
 
-            if (doubles[i] < min){
+            if (doubles[i] < min) {
                 min = doubles[i];
             }
 

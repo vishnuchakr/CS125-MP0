@@ -10,9 +10,10 @@ import java.util.Scanner;
  * @see <a href="https://cs125.cs.illinois.edu/MP/0/">MP0 Documentation</a>
  */
 public final class LCM {
-
+    /**
+     * Random comment to get rid of checkstyle error.
+    */
     public static final int LCM_INVALID = -1;
-
     /**
      * Returns the least common multiple of two integers.
      * <p>
@@ -27,38 +28,28 @@ public final class LCM {
      * @return the least common multiple of the two integers.
      * @see <a href="https://en.wikipedia.org/wiki/Least_common_multiple">Least common multiple</a>
      */
-    public static int lcm(final int first, final int second)
-    {
+    public static int lcm(final int first, final int second) {
 
-        if (first == 0 || second == 0){
+        if (first == 0 || second == 0) {
             return LCM_INVALID;
         }
 
-        int multiple;
-
-        if (first % second == 0){
-            multiple = first;
-        }
-
-        else if (second % first == 0){
-            multiple = second;
-        }
-
-        else {
-            if (first > second){
-                multiple = first;
-                while ((multiple % first != 0) && (multiple % second != 0)){
-                    multiple++;
+        if (first == second) {
+            return first;
+        } else if (first > second) {
+            for (int i = 1; i < second; i++) {
+                if ((i * first) % second == 0) {
+                    return Math.abs(i * first);
                 }
             }
-            else {
-                multiple = second;
-                while ((multiple % first != 0) && (multiple % second != 0)){
-                    multiple++;
+        } else {
+            for (int i = 1; i < first; i++) {
+                if ((i * second) % first == 0) {
+                    return Math.abs(i * second);
                 }
             }
         }
-        return multiple;
+        return first * second;
     }
 
     /* ********************************************************************************************
